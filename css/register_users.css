@@ -26,7 +26,7 @@ main{
     justify-content: center;
     justify-self:center;
     grid-column: 1/13;
-    grid-row: 4/10;
+    grid-row: 2/12;
     border-radius: 7px;
     background-color: white;
 }
@@ -103,6 +103,7 @@ input[type="password"]:hover{
     cursor: pointer;
 }
 
+
 @media(max-width: 1024px){
     body{
         background-color: rgb(31, 67, 165);
@@ -115,15 +116,16 @@ input[type="password"]:hover{
 
     .formulario{
         width: 90%;
+        height: auto;
         padding: 15px;
         margin-left: auto;
         margin-right: auto;
-        height: auto;
+        grid-row: 3/11;
     }
 
     .formulario h2{
         font-size: 2rem;
-        margin-top: 3rem;
+
         color: #48f;
     }
 
@@ -213,11 +215,13 @@ input[type="password"]:hover{
         padding: 15px;
         margin-left: auto;
         margin-right: auto;
+        grid-row: 3/11;
+        grid-column: 1/5;
     }
 
     .formulario h2{
         font-size: 2rem;
-        margin-top: 35px;
+        margin-top: -30px;
         font-weight: 700;
         color: rgb(36, 36, 36);
     }

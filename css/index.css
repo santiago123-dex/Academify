@@ -16,10 +16,11 @@ h1{
 a{
     text-decoration: none;
     color: #000;
-    background-color: #caec8d;
+    background-color: #48f;
     padding: 35px 50px;
     display: block;
     width: fit-content;
     margin: 3rem auto;
     text-align: center;
+    border-radius: 10px;
 }
