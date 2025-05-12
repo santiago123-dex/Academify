@@ -215,7 +215,7 @@ input[type="password"]:hover{
         padding: 15px;
         margin-left: auto;
         margin-right: auto;
-        grid-row: 3/11;
+        grid-row: 3/10;
         grid-column: 1/5;
     }
 
@@ -236,6 +236,42 @@ input[type="password"]:hover{
     }
 }
 
+
+@media (max-width: 380px){
+    body{
+        background-color: rgb(31, 67, 165);
+    }
+
+    main{
+        grid-template-columns: repeat(2, 1fr);
+        height: 100vh;
+    }
+
+    .formulario{
+        width: 90%;
+        height: auto;
+        padding: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .formulario h2{
+        font-size: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        color: rgb(36, 36, 36);
+    }
+
+    form{
+        gap: 12px;
+    }
+
+    button{
+        width: 90%;
+        padding: 18px;
+    }
+}
 
 @keyframes rgb {
     10%{

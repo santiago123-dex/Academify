@@ -10,17 +10,73 @@ body{
 
 h1{
     text-align: center;
-    margin: 18rem 0 0 0;
+}
+
+main{
+    display: flex; /* Cambia el diseño a flexbox */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center;
+    height: 100vh;
+}
+
+.container{
+    width: 40%;
+    max-width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 7px;
+    background-color: white;
+    padding: 20px;
+    margin-top: 0;
+    margin-top: 2rem; /* Agrega espacio entre el título y la caja */
 }
 
 a{
+    display: flex;
     text-decoration: none;
     color: #000;
     background-color: #48f;
-    padding: 35px 50px;
+    padding: 30px 40px;
+    width: fit-content;
     display: block;
     width: fit-content;
-    margin: 3rem auto;
+    margin: auto;
     text-align: center;
     border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem; /* Reduce el tamaño del título */
+        margin: 0rem 0 1rem 0; /* Ajusta el margen superior e inferior */
+    }
+
+    .container {
+        width: 90%; /* Aumenta el ancho para ocupar más espacio en pantallas pequeñas */
+        padding: 15px; /* Reduce el padding interno */
+    }
+
+    a {
+        padding: 25px 40px; /* Reduce el tamaño del botón */
+        font-size: 1rem; /* Ajusta el tamaño del texto del botón */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; /* Reduce aún más el tamaño del título */
+    }
+
+    .container {
+        width: 95%; /* Aumenta el ancho para ocupar más espacio en pantallas pequeñas */
+        padding: 10px; /* Reduce el padding interno */
+    }
+
+    a {
+        padding: 20px 30px; /* Reduce el tamaño del botón */
+        font-size: 0.9rem; /* Ajusta el tamaño del texto del botón */
+    }
 }
