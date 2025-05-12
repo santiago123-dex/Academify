@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: white;
+  animation: color 1s ease infinite;
+}
+
+@keyframes color {
+  10% {
+    background-color: red;
+  }
+  20% {
+    background-color: rgb(30, 255, 60);
+  }
+  30% {
+    background-color: rgb(250, 29, 165);
+  }
+  40% {
+    background-color: rgb(255, 0, 221);
+  }
+  60% {
+    background-color: rgb(229, 255, 0);
+  }
+  80% {
+    background-color: rgb(255, 166, 0);
+  }
+  100% {
+    background-color: rgb(38, 0, 255);
+  }
+}
