@@ -5,9 +5,12 @@
 }
 
 body{
-    background-color: #ddd;
     font-family: Arial, sans-serif;
     width: 100%;
+    background-image: url(../img/fondo3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
 }
 
 main{
@@ -17,7 +20,7 @@ main{
     height: 100vh;
     width: 100%;
     align-items: center;
-    background: radial-gradient(circle at 50% 50%, #fff, #ddd);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 /* Apartado del formulario */
@@ -78,12 +81,15 @@ form button{
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-
+    background-color: #39d;
+    border: none;
+    color: #eee;
+    font-weight: bold;
 }
 
 form button:hover{
-    background-color: #39d;
+    background-color: #9d3;
     cursor: pointer;
-    border: 1px solid #39d;
+    border: none;
     color: #eee;
 }
