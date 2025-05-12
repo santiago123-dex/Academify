@@ -12,15 +12,18 @@ main{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
-    height: 100vh;
+    min-height: 100vh;
+    align-items: center;
 }
 
 /* Apartado del formulario */
+
 
 .formulario{
     width: 40%;
     max-width: 400px;
     padding: 50px 20px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,6 +42,7 @@ main{
     font-weight: 700;
 }  
 
+
 form{
     display: flex;
     flex-direction: column;
@@ -52,10 +56,13 @@ form input{
     border-radius: 5px;
     margin: 3px auto;
     padding: 15px;
+    padding-left: 33px;
 }
 
+
+
 form input::placeholder{
-color: rgb(39, 39, 39);
+    color: rgb(39, 39, 39);
 }
 
 button{
@@ -77,32 +84,35 @@ button:hover{
     cursor: pointer;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"]
-{
-    background-image: url('../img/profile-user.png');
-    background-size: 20px;
-    background-repeat:no-repeat;
-    background-position: calc(100% - 10px) center;
-    padding-right: 50px;
-    width: 90%;
-    padding: 15px;
-    margin: 3px auto;
+/* ICONOS */
+
+.content-icon{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: auto;
 }
 
-input[type="email"]{
-    background-image: url(../img/email.png);
+.icon{
+    position: absolute;
+    top: 18px;
+    left: 28px;
+}  
+
+input[type="date"]{
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    background: none !important;
+    position: relative;
 }
 
-input[type="password"]{
-    background-image: url(../img/hidden.png);
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none; /* Oculta el ícono del calendario en navegadores WebKit */
 }
 
-input[type="password"]:hover{
-    cursor: pointer;
-}
-
+/*Seccion de dispositivos moviles*/
 
 @media(max-width: 1024px){
     body{
@@ -120,12 +130,12 @@ input[type="password"]:hover{
         padding: 15px;
         margin-left: auto;
         margin-right: auto;
-        grid-row: 3/11;
+        grid-row: 2/12;
     }
 
     .formulario h2{
         font-size: 2rem;
-
+        margin-top: 2rem;
         color: #48f;
     }
 
@@ -157,6 +167,7 @@ input[type="password"]:hover{
     }
     .formulario h2{
         font-size: 2rem;
+        margin-top: 2rem;
         color: #48f;
     }
     form{
@@ -221,7 +232,6 @@ input[type="password"]:hover{
 
     .formulario h2{
         font-size: 2rem;
-        margin-top: -30px;
         font-weight: 700;
         color: rgb(36, 36, 36);
     }
@@ -269,7 +279,11 @@ input[type="password"]:hover{
 
     button{
         width: 90%;
-        padding: 18px;
+        padding: 15px;
+        margin-top: 0;
+    }
+    #birthdate{
+        margin-bottom: 0;
     }
 }
 

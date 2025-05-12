@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel="stylesheet" href="css/register_users.css">
     <title>Document</title>
 </head>
@@ -10,12 +11,24 @@
     <main>
     <section class="formulario">
         <h2>Crear Cuenta</h2>
-        <form action="">    
-            <input type="text" id="name" placeholder="Nombre">
-            <input type="email" id="email" placeholder="Email">
-            <input type="password" id="password" placeholder="Contraseña">
-            <input type="date" id="birthdate" placeholder="Fecha de Nacimiento">
-            <button>CREAR CUENTA</button>
+        <form action="">
+            <div class="content-icon">
+                <i class="fi fi-rr-user icon"></i>
+                <input type="text" id="name" placeholder="Nombre">
+            </div>    
+            <div class="content-icon">
+                <i class="fi fi-rr-envelope icon"></i>
+                <input type="email" id="email" placeholder="Email">
+            </div>
+            <div class="content-icon">
+                <i class="fi fi-rr-eye-crossed icon"></i>
+                <input type="password" id="password" placeholder="Contraseña">
+            </div>
+            <div class="content-icon">
+                <i class="fi fi-rr-calendar icon"></i>
+                <input type="date" id="birthdate" placeholder="Fecha de Nacimiento">
+            </div>
+                <button>CREAR CUENTA</button>
         </form>
     </section>
 </main>
