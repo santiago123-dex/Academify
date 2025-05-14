@@ -8,12 +8,37 @@ body{
     font-family: Arial, sans-serif;
 }
 
+body.dark-mode{
+    background-color: #111;
+    color: #fff;
+}
+
 main{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
-    min-height: 100vh;
+    height: 100vh;
     align-items: center;
+}
+
+.container-button{
+    width: 100%;
+    display: flex;
+    grid-column: 1/13;
+    grid-row: 1/2;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#toggledark{
+    display: flex;
+    width: 10%;
+    text-align: center;
+    padding: 14px 18px;
+    background-color: #dcdcdc;
+    border: none;
+    border-radius: 10px;
+    margin: 18px;
 }
 
 /* Apartado del formulario */
@@ -65,7 +90,7 @@ form input::placeholder{
     color: rgb(39, 39, 39);
 }
 
-button{
+.btn-account{
     color:white;
     padding: 18px;
     width: 90%;
@@ -79,7 +104,7 @@ button{
     background: linear-gradient( 45deg,rgb(51, 117, 230),rgb(30, 58, 134));
 }
 
-button:hover{
+.btn-account:hover{
     background-color: rgb(39, 101, 235);
     cursor: pointer;
 }
@@ -143,7 +168,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         gap: 12px;
     }
 
-    button{
+    .btn-account{
         width: 90%;
         padding: 18px;
     }
@@ -174,7 +199,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         gap: 12px;
     }
 
-    button{
+    .btn-account{
         width: 90%;
         padding: 18px;
     }
@@ -203,7 +228,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         gap: 12px;
     }
     
-    button{
+    .btn-account{
         width: 90%;
         padding: 18px;
     }
@@ -213,6 +238,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 @media (max-width:480px){
     body{
         background-color: rgb(31, 67, 165);
+    }
+
+    body.dark-mode{
+        background-color: #fff;
+
     }
 
     main{
@@ -240,7 +270,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         gap: 12px;
     }
 
-    button{
+    .btn-account{
         width: 90%;
         padding: 18px;
     }
@@ -277,7 +307,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         gap: 12px;
     }
 
-    button{
+    .btn-account{
         width: 90%;
         padding: 15px;
         margin-top: 0;

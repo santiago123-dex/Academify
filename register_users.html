@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,30 +8,36 @@
     <link rel="stylesheet" href="css/register_users.css">
     <title>Document</title>
 </head>
+
 <body>
     <main>
-    <section class="formulario">
-        <h2>Crear Cuenta</h2>
-        <form action="">
-            <div class="content-icon">
-                <i class="fi fi-rr-user icon"></i>
-                <input type="text" id="name" placeholder="Nombre">
-            </div>    
-            <div class="content-icon">
-                <i class="fi fi-rr-envelope icon"></i>
-                <input type="email" id="email" placeholder="Email">
-            </div>
-            <div class="content-icon">
-                <i class="fi fi-rr-eye-crossed icon"></i>
-                <input type="password" id="password" placeholder="Contraseña">
-            </div>
-            <div class="content-icon">
-                <i class="fi fi-rr-calendar icon"></i>
-                <input type="date" id="birthdate" placeholder="Fecha de Nacimiento">
-            </div>
-                <button>CREAR CUENTA</button>
-        </form>
-    </section>
-</main>
+        <div class="container-button">
+            <button id="toggledark">Modo Azul</button>
+        </div>
+        <section class="formulario">
+            <h2 id="TituloMode">Crear Cuenta</h2>
+            <form action="">
+                <div class="content-icon">
+                    <i class="fi fi-rr-user icon" id="imagen"></i>
+                    <input type="text" id="name" placeholder="Nombre">
+                </div>
+                <div class="content-icon">
+                    <i class="fi fi-rr-envelope icon" id="imagen"></i>
+                    <input type="email" id="email" placeholder="Email">
+                </div>
+                <div class="content-icon">
+                    <i class="fi fi-rr-eye-crossed icon" id="imagen"></i>
+                    <input type="password" id="password" placeholder="Contraseña">
+                </div>
+                <div class="content-icon">
+                    <i class="fi fi-rr-calendar icon" id="icon"></i>
+                    <input type="date" id="birthdate" placeholder="Fecha de Nacimiento">
+                </div>
+                <button class="btn-account">CREAR CUENTA</button>
+            </form>
+        </section>
+    </main>
+    <script src="register.js"></script>
 </body>
+
 </html>
