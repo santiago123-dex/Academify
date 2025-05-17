@@ -10,7 +10,14 @@ body{
 
 body.dark-mode{
     background-color: #111;
-    color: #fff;
+}
+
+body.dark-mode .icon{
+    color: #000;
+}
+
+body:not(.dark-mode) .icon{
+    color: #000;
 }
 
 main{
@@ -19,6 +26,7 @@ main{
     grid-template-rows: repeat(12, 1fr);
     height: 100vh;
     align-items: center;
+    justify-content: center;
 }
 
 .container-button{
@@ -32,9 +40,9 @@ main{
 
 #toggledark{
     display: flex;
-    width: 10%;
+    width: auto;
     text-align: center;
-    padding: 14px 18px;
+    padding: 16px 30px;
     background-color: #dcdcdc;
     border: none;
     border-radius: 10px;
@@ -48,13 +56,13 @@ main{
     width: 40%;
     max-width: 400px;
     padding: 50px 20px;
-    margin: auto;
+    margin: 2rem auto 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     justify-self:center;
     grid-column: 1/13;
-    grid-row: 2/12;
+    grid-row: 3/13;
     border-radius: 7px;
     background-color: white;
 }
@@ -90,7 +98,7 @@ form input::placeholder{
     color: rgb(39, 39, 39);
 }
 
-.btn-account{
+.btnAccount{
     color:white;
     padding: 18px;
     width: 90%;
@@ -104,9 +112,36 @@ form input::placeholder{
     background: linear-gradient( 45deg,rgb(51, 117, 230),rgb(30, 58, 134));
 }
 
-.btn-account:hover{
+.btnAccount:hover{
     background-color: rgb(39, 101, 235);
     cursor: pointer;
+}
+
+
+#lista{
+    /* Se elimina display: flex para que respete grid-row y grid-column */
+    justify-content: flex-start;
+    align-items: stretch;
+    background-color: #dcdcdc;
+    list-style: none;
+    padding: 20px 0;
+    border-radius: 20px;
+    gap: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    grid-column: 1/13;
+    grid-row: 13/13;
+    width: 50%;
+    margin: 6rem auto 2rem auto;
+}
+
+#lista li {
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    margin: 0 auto;
+    white-space: pre-line;
+
 }
 
 /* ICONOS */
@@ -155,7 +190,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         padding: 15px;
         margin-left: auto;
         margin-right: auto;
-        grid-row: 2/12;
+        grid-row: 3/13;
     }
 
     .formulario h2{
@@ -168,13 +203,20 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         gap: 12px;
     }
 
-    .btn-account{
+    .btnAccount{
         width: 90%;
         padding: 18px;
     }
+     #lista{
+        width: 58%;
+        min-width: unset;
+        max-width: 95vw;
+        padding: 10px 0;
+        font-size: 0.95rem;
+        margin-top: 5rem;
+    }
+   }
     
-}
-
 @media (max-width: 768px){
     body{
         background-color: rgb(31, 67, 165);
@@ -189,6 +231,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         padding: 15px;
         margin-left: auto;
         margin-right: auto;
+        grid-row: 3/13;
     }
     .formulario h2{
         font-size: 2rem;
@@ -199,9 +242,22 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         gap: 12px;
     }
 
-    .btn-account{
+    .btnAccount{
         width: 90%;
         padding: 18px;
+    }
+      #lista{
+        width: 60%;
+        min-width: unset;
+        max-width: 95vw;
+        padding: 10px 0;
+        font-size: 0.95rem;
+        margin-top: 5rem;
+    }
+    #lista li {
+        width: 98%;
+        font-size: 0.95rem;
+        padding: 6px 8px;
     }
     
 }
@@ -217,9 +273,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     .formulario{
         width: 90%;
         height: auto;
-        padding: 15px;
+        padding: 5px 10px;
         margin-left: auto;
         margin-right: auto;
+        grid-row: 2/12;
     }
     .formulario h2{
         font-size: 2rem;
@@ -228,9 +285,22 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         gap: 12px;
     }
     
-    .btn-account{
+    .btnAccount{
         width: 90%;
         padding: 18px;
+    }
+     #lista{
+        width: 60%;
+        min-width: unset;
+        max-width: 95vw;
+        padding: 10px 0;
+        font-size: 0.95rem;
+        margin-top: 2rem;
+    }
+    #lista li {
+        width: 98%;
+        font-size: 0.95rem;
+        padding: 6px 8px;
     }
 }
 
@@ -256,7 +326,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         padding: 15px;
         margin-left: auto;
         margin-right: auto;
-        grid-row: 3/10;
+        margin-bottom: 2rem;
+        grid-row: 5/10;
         grid-column: 1/5;
     }
 
@@ -270,7 +341,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         gap: 12px;
     }
 
-    .btn-account{
+    .btnAccount{
         width: 90%;
         padding: 18px;
     }
@@ -293,6 +364,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         padding: 15px;
         margin-left: auto;
         margin-right: auto;
+        grid-row: 2/13;
     }
 
     .formulario h2{
@@ -307,7 +379,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         gap: 12px;
     }
 
-    .btn-account{
+    .btnAccount{
         width: 90%;
         padding: 15px;
         margin-top: 0;
