@@ -1,0 +1,25 @@
+body {
+      margin: 0;
+      padding: 2rem;
+      font-family: sans-serif;
+      background-color: white;
+      color: black;
+      transition: all 0.3s ease;
+    }
+    /* Modo oscuro aplicado al body */
+    body.dark-mode {
+      background-color: #121212;
+      color: white;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #eee;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ddd;
+    }

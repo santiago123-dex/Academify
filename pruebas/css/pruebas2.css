@@ -1,0 +1,18 @@
+#miCaja {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    /* Separarla un poco del botón */
+    /* Transición suave para el cambio de color (opcional) */
+    transition: background-color 0.3s ease;
+}
+
+#miCaja.hover {
+    /* Un estilo para cuando el mouse esté encima */
+    background-color: lightcoral;
+    font-weight: bold;
+}
